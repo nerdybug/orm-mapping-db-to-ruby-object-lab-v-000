@@ -59,7 +59,7 @@ class Student
     SELECT * FROM students
     WHERE grade = 9
     SQL
-    DB[:conn].execute(grade_9_sql).collect do |row| #
+    DB[:conn].execute(grade_9_sql).collect do |row| 
       self.new_from_db(row)
     end
   end
@@ -69,7 +69,7 @@ class Student
     SELECT * FROM students
     WHERE grade <= 11
     SQL
-    DB[:conn].execute(below_12_sql).collect do |row| #
+    DB[:conn].execute(below_12_sql).collect do |row| 
       self.new_from_db(row)
     end
   end
@@ -80,7 +80,7 @@ class Student
     WHERE grade = 10
     LIMIT ?
     SQL
-    DB[:conn].execute(x_students_sql, x_students).collect do |row| #
+    DB[:conn].execute(x_students_sql, x_students).collect do |row| 
       self.new_from_db(row)
     end
   end
@@ -104,4 +104,5 @@ class Student
       self.new_from_db(row)
     end
   end
+
 end
