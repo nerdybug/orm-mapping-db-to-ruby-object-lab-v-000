@@ -83,8 +83,7 @@ class Student
     first_in_10_sql = <<-SQL
     SELECT * FROM students
     WHERE grade = 10
-    LIMIT 1
     SQL
-    DB[:conn].execute(first_in_10_sql).collect[0]
+    DB[:conn].execute(first_in_10_sql).collect.first
   end
 end
