@@ -61,4 +61,12 @@ class Student
     SQL
     DB[:conn].execute(grade_9_sql).collect
   end
+
+  def self.students_below_12th_grade
+    below_12_sql = <<-SQL
+    SELECT * FROM students
+    WHERE grade <= 11
+    SQL
+    DB[:conn].execute(below_12_sql).collect
+  end
 end
