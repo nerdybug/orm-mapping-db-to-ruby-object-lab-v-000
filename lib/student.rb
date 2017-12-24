@@ -59,6 +59,6 @@ class Student
     SELECT * FROM students
     WHERE grade = 9
     SQL
-    DB[:conn].execute(grade_9_sql).count
+    DB[:conn].execute(grade_9_sql).collect
   end
 end
