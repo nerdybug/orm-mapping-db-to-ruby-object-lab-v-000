@@ -85,6 +85,6 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-    DB[:conn].execute(first_in_10_sql).collect
+    DB[:conn].execute(first_in_10_sql).collect[0]
   end
 end
